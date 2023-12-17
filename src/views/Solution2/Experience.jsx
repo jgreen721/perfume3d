@@ -1,18 +1,20 @@
 import React, {useEffect,useState,useRef} from 'react'
-import {useGLTF,Sphere} from "@react-three/drei"
+import {useGLTF,Sphere,Text} from "@react-three/drei"
 import { useThree, useFrame } from '@react-three/fiber';
 import {LayerMaterial,Gradient} from "lamina"
 import * as THREE from "three"
 
 const PerfumScene = ()=>{
-    const img = useGLTF("./perfumescene.glb");
-    const [coords,setCoords] = useState([1,-1,2])
+    const img = useGLTF("./perfumechallengespray.glb");
+    const [coords,setCoords] = useState([1,-1,3])
     const [scale,setScale] = useState(1)
+
+    console.log(img)
 
 
     useEffect(()=>{
 if(innerWidth < 850){
-  setCoords((coords)=>coords = [1,-1,2])
+  setCoords((coords)=>coords = [1.15,-.8,3])
   setScale(.6)
   console.log('reset coords')
 }
@@ -20,7 +22,7 @@ if(innerWidth < 850){
 
     onresize=(e)=>{
       if(innerWidth < 850){
-        setCoords((coords)=>coords = [1,-1,2])
+        setCoords((coords)=>coords = [1.15,-.8,3])
         setScale(.6)
       }
     }
@@ -33,6 +35,33 @@ if(innerWidth < 850){
     )
 
 }
+
+// const AdText = ()=>{
+
+
+//   return (
+//     <group>
+//       <Text scale={.4}>
+//         Gabrielle Essence 
+//       </Text>
+//       <Text scale={.4} position={[-.25,-.5,0]}>
+//       Eau De Parfum
+//       </Text>
+//       <Text scale={.15} position={[.5,-1,0]}>
+//       A floral, solar and voluptuous interpretation composed 
+//       </Text>
+//       <Text scale={.15} position={[-.75,-1.25,0]}>
+//       by Olivier Polge, 
+//       </Text>
+//       <Text scale={.15} position={[.2,-1.5,0]}>
+    
+//   Perfumer-Creator for the House of CHANEL.
+//       </Text>
+//     </group>
+//   )
+// }
+
+
 
 const Experience = () => {
   const {camera} = useThree();
@@ -57,8 +86,8 @@ const Experience = () => {
       <LayerMaterial side={THREE.BackSide}>
           <Gradient colorA="lightblue" colorB="white" axes="y" start={0} end={.5}/>
       </LayerMaterial>
-
     </Sphere>
+  
     <group ref={perfumeRef}>
     <PerfumScene/>
     </group>
