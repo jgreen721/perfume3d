@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-const Overlay = () => {
+const Overlay = ({setSolution1}) => {
   return (
     <div className="overlay">
         <div className="perfume-card">

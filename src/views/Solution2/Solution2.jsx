@@ -29,7 +29,7 @@ const Solution2 = ({setSolution1}) => {
                     </Suspense>
                  <Table/>
                   </Canvas>
-                  <Overlay/>
+                  <Overlay setSolution1={setSolution1}/>
 
     </div>
   )
