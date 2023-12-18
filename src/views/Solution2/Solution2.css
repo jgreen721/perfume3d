@@ -28,4 +28,27 @@
   border-radius: 0.5rem;
   box-shadow: 10px 5px 15px black, 10px 5px 35px black;
   transform: translateX(17.5rem) translateY(-17.5rem);
+  animation: fadeinslow 2s 3s forwards;
+  opacity: 0;
+}
+
+@keyframes fadeinslow {
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .overlay {
+    align-items: flex-start;
+    padding: 6rem 0;
+  }
+  .perfume-card {
+    width: 300px;
+    /* border: 3px solid red; */
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 10px 5px 15px black, 10px 5px 35px black;
+    transform: translateX(-1.5rem);
+  }
 }

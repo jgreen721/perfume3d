@@ -14,7 +14,7 @@ const PerfumScene = ()=>{
 
     useEffect(()=>{
 if(innerWidth < 850){
-  setCoords((coords)=>coords = [1.15,-.8,3])
+  setCoords((coords)=>coords = [1,-.8,3])
   setScale(.6)
   console.log('reset coords')
 }
@@ -22,7 +22,7 @@ if(innerWidth < 850){
 
     onresize=(e)=>{
       if(innerWidth < 850){
-        setCoords((coords)=>coords = [1.15,-.8,3])
+        setCoords((coords)=>coords = [1,-.8,3])
         setScale(.6)
       }
     }
