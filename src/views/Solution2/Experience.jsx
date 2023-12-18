@@ -5,7 +5,7 @@ import {LayerMaterial,Gradient} from "lamina"
 import * as THREE from "three"
 
 const PerfumScene = ()=>{
-    const img = useGLTF("./perfumechallengespray.glb");
+    const img = useGLTF("./perfumechallengeflowers.glb");
     const [coords,setCoords] = useState([1,-1,3])
     const [scale,setScale] = useState(1)
 
