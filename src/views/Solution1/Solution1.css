@@ -187,8 +187,9 @@
 
 .alt-btn {
   position: absolute;
-  bottom: 3.5rem;
+  bottom: 2rem;
   margin: 3rem;
+  left: 0rem;
   background: transparent;
   cursor: pointer;
   text-transform: uppercase;
@@ -210,6 +211,7 @@
   .solution1-container {
     padding: 2.2rem 1.2rem;
     align-items: flex-start;
+    /* min-height: auto; */
   }
   .ad-card {
     flex-direction: column;

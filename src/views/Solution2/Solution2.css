@@ -17,7 +17,7 @@
 
 .absolute-btn {
   position: absolute;
-  bottom: 0rem;
+  /* bottom: 0rem; */
   left: 4rem;
 }
 
@@ -30,6 +30,11 @@
   transform: translateX(17.5rem) translateY(-17.5rem);
   animation: fadeinslow 2s 3s forwards;
   opacity: 0;
+}
+
+.non-sale-price {
+  opacity: 50%;
+  text-decoration: line-through;
 }
 
 @keyframes fadeinslow {
