@@ -32,7 +32,7 @@ const Solution1 = ({setSolution1}) => {
           </div>
         </div>
       </main>
-      <button onClick={()=>setSolution1((solution1)=>solution1=!solution1)} className="alt-btn">3d Solution</button>
+      <button onClick={()=>setSolution1((solution1)=>solution1=!solution1)} className="alt-btn absolute-btn">3d Solution</button>
 
     </div>
   )
